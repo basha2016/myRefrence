@@ -1,0 +1,70 @@
+
+
+Docker Commands
+1. To know docker version
+docker version
+2. To know the information about current docker installation details
+docker info
+3. To display all docker images in the system:
+docker images
+4. docker ps to see running and stopped containers
+docker ps
+a. To show all container
+docker ps -a
+5. To pull image from http://hub.docker.com
+docker pull alpine
+docker pull ubuntu
+docker pull ubuntu:14.04
+6. To run a new container
+docker run <image>
+docker run hello-world
+7. To run a container under specific port
+docker run -d --name web -p 80:8080 caprepo/hello-world
+8. To start and stop the running container
+docker stop web
+docker start web
+9. To stop all running containers
+docker stop $(docker ps -aq)
+10. To remove all running containers
+docker rm $(docker ps -aq)
+a. To force to remove running container
+docker rm -f $(docker ps -aq)
+11. To remove images
+docker rmi $(docker images -q)
+12. To delete all images
+ 
+3 Docker Lab ""
+docker rmi $(docker images -q)
+a. Force to delete all images
+docker rmi -f $(docker images -q)
+13. Docker login command to login to docker hub registry
+docker login
+ (or)
+docker login -u <<username>> https://index.docker.io/v1/
+-<<username>> docker hub user name
+14. To logout from docker hub
+docker logout
+15. To show the history
+docker history <image>
+16. To show logs of the container
+docker logs <container>
+docker logs <<containerId>>
+-You can refer docker ps command to get container Id.
+17. Kill one or more running containers
+docker kill [OPTIONS] CONTAINER [CONTAINER...]
+18. Build an image from a Dockerfile
+docker build -t ${IMAGE}:${VERSION}
+19. Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+docker tag ${IMAGE}:${VERSION} ${IMAGE}:latest
+20. Display a live stream of container(s) resource usage statistics
+docker stats [OPTIONS] [CONTAINER...]
+21. Display the running processes of a container
+docker top CONTAINER [ps OPTIONS]
+22. Pull an image or a repository from a registry
+docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+23. Push an image or a repository to a registry
+docker push [OPTIONS] NAME[:TAG]
+24. Rename a container
+ 
+4 Docker Lab ""
+docker rename CONTAINER NEW_NA
