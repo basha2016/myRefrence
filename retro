@@ -1,0 +1,7 @@
+Some key workflows or processes that can be automated with Kubernetes / Open shift workflows and processes you can automate
+1. App setup/Installation in PA/PROD
+2. Pod (Docker) and node scaling
+3. Persistent storage management (If applicable)
+4. Chaos testing
+5. Deploying the CRDs could include creating new namespaces(ASYS/ TSYS...etc)
+6. Container and Kubernetes or Open shift security
